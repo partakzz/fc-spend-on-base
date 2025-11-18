@@ -1,0 +1,66 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  
+  /* Farcaster / Dark Theme Colors */
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  
+  --color-card: #0a0a0a;
+  --color-card-foreground: #ffffff;
+  
+  --color-popover: #0a0a0a;
+  --color-popover-foreground: #ffffff;
+  
+  --color-primary: #855DCD;
+  --color-primary-foreground: #ffffff;
+  
+  --color-secondary: #1a1a1a;
+  --color-secondary-foreground: #ffffff;
+  
+  --color-muted: #1a1a1a;
+  --color-muted-foreground: #888888;
+  
+  --color-accent: #1a1a1a;
+  --color-accent-foreground: #ffffff;
+  
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  
+  --color-border: #1a1a1a;
+  --color-input: #1a1a1a;
+  --color-ring: #855DCD;
+  
+  --radius: 0.75rem;
+}
+
+* {
+  border-color: theme('colors.border');
+}
+
+body {
+  color: theme('colors.foreground');
+  background: theme('colors.background');
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.muted');
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.muted-foreground');
+}
+</
